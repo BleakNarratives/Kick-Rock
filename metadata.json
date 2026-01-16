@@ -1,6 +1,6 @@
 {
-  "name": "The Grand Goodbye",
-  "description": "A service to generate unique, clever, and catchy breakup messages for any relationship, powered by Gemini AI.",
+  "name": "Kick Rocks",
+  "description": "A service to generate unique, clever, and catchy breakup messages or AI-powered music, for any relationship, powered by Gemini AI, Suno (mocked), and Riffusion (mocked).",
   "requestFramePermissions": [
     "microphone"
   ]

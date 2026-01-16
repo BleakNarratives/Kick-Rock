@@ -34,28 +34,43 @@ export async function generateBreakupMessageStream(
     prompt += ` The primary reason for the breakup is: "${reason}".`;
     prompt += ` The message MUST have a ${tone} tone.`;
 
-    // Tailored instructions based on specific tones
+    // Tailored instructions based on specific tones for the "nah nah-nah, boo boo" vibe
     switch (tone) {
       case Tone.COUNTRY_SONG:
-        prompt += ` Please format this as a catchy, rhyming country song lyric about heartbreak and moving on.`;
+        prompt += ` Format this as a mournful, slightly whiny, yet catchy country song lyric about heartbreak and movin' on down the road. Make it sound like it's from a dive bar jukebox.`;
         break;
       case Tone.FORMAL:
-        prompt += ` Format this as a cold, professional, almost corporate termination notice. Use business terminology.`;
+        prompt += ` Format this as a ridiculously over-the-top, bureaucratic corporate termination notice. Use as much passive-aggressive, corporate jargon as possible to imply their utter insignificance. Make it sound like they're being downsized from your life.`;
         break;
       case Tone.SHAKESPEAREAN:
-        prompt += ` Write this in Early Modern English, as if it were a monologue from a Shakespearean tragedy. Use 'thou', 'thee', and dramatic metaphors.`;
+        prompt += ` Write this in the grand, dramatic, and slightly mocking style of a Shakespearean monologue, full of flowery insults and exaggerated woe. Use 'thou', 'thee', and metaphors that question their very being.`;
         break;
       case Tone.SARCASTIC:
-        prompt += ` Use heavy irony and biting wit. Don't worry about being "nice"; focus on being sharp and clever.`;
+        prompt += ` Use heavy irony, biting wit, and thinly veiled insults. Don't be subtle; make it clear you're done and they're the problem, but with a smug grin. Think playground taunt, but with bigger words.`;
         break;
       case Tone.PASSIVE_AGGRESSIVE:
-        prompt += ` Use a "it's fine, I'm fine" attitude. Use backhanded compliments and subtle digs that make the recipient feel slightly confused yet definitely dumped.`;
+        prompt += ` Craft a message dripping with sugary venom. Use backhanded compliments, veiled threats, and statements like "It's fine, I'm fine" while clearly implying the opposite. Make them feel slightly confused but definitely dumped.`;
         break;
       case Tone.EMPATHETIC:
-        prompt += ` Be extremely gentle, warm, and understanding. Focus on growth and the well-being of the recipient while remaining clear about the ending.`;
+        prompt += ` While still breaking up, try to sound overly sweet, almost condescendingly gentle. Focus on *their* growth and how *they* will overcome this, implying it's a blessing in disguise for them.`;
+        break;
+      case Tone.WITTY:
+        prompt += ` Make it clever, sharp, and deliver a memorable verbal mic drop. Use intelligent wordplay that leaves them stunned and slightly impressed, despite being dumped.`;
+        break;
+      case Tone.DRAMATIC:
+        prompt += ` Go full soap opera! Over-the-top declarations of anguish and inevitable doom, but with a theatrical flair that subtly mocks the severity.`;
+        break;
+      case Tone.POETIC:
+        prompt += ` Write a short, rhyming poem or verse that's subtly insulting but sounds beautiful. The kind of 'artistic' breakup that leaves them scratching their head.`;
+        break;
+      case Tone.BLUNT_BUT_KIND:
+        prompt += ` Be direct and to the point, but wrap it in a thin veneer of civility that still makes it clear there's no going back, like ripping off a band-aid quickly but with a soft pat afterward.`;
+        break;
+      case Tone.HUMOROUS:
+        prompt += ` Inject lighthearted jokes and absurd comparisons. Make them laugh, but also realize they're officially on your 'kick rocks' list.`;
         break;
       default:
-        prompt += ` Make it clever, unique, and memorable. Avoid being overly mean unless the tone implies otherwise, but be direct.`;
+        prompt += ` Make it clever, unique, and memorable. Avoid being overly mean unless the tone implies otherwise, but be direct. Lean into a slight "nah nah-nah, boo boo" energy without being overtly offensive.`;
     }
   }
 
